@@ -27,13 +27,24 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'prettier/prettier': 'error',
     'lines-between-class-members': 'off',
+    'object-curly-newline': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
       {
         ts: 'never',
+        tsx: 'never',
       },
     ],
     indent: ['error', 2, { ignoredNodes: ['PropertyDefinition'] }],
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.mts', '*.cts', '*.tsx'],
+      rules: {
+        'no-undef': 'off',
+      },
+    },
+  ],
 };
