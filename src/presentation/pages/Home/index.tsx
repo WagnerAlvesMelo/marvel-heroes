@@ -1,7 +1,12 @@
 import React from 'react';
 
-import { ReactComponent as Logo } from 'assets/logo.svg';
+import MainLayout from 'presentation/layouts/Main';
+import CharacterList from 'presentation/components/Modules/Character/CharacterList';
 
 export default function Home() {
-  return <Logo />;
+  return (
+    <MainLayout>
+      <CharacterList characters={[]} />
+    </MainLayout>
+  );
 }

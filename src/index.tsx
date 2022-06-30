@@ -6,13 +6,14 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyles from 'presentation/styles/global';
 import Theme from 'presentation/styles/theme';
 import reportWebVitals from 'reportWebVitals';
+import Home from 'presentation/pages/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={Theme}>
       <GlobalStyles />
-      <p>aaa</p>
+      <Home />
     </ThemeProvider>
   </React.StrictMode>,
 );
