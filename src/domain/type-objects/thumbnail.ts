@@ -1,14 +1,17 @@
 import { ClassProps } from 'utils/types';
 
 export default class Thumbnail {
-  path!: string;
-  extension!: string;
+  path?: string;
+  extension?: string;
 
   get mountedThumbnail() {
-    return this.path + this.extension;
+    if (this.path && this.extension) {
+      return `${this.path}.${this.extension}`;
+    }
+    return '';
   }
 
-  constructor({ ...attrs }: ClassProps<Thumbnail>) {
-    Object.assign(attrs);
+  constructor(attrs?: ClassProps<Thumbnail>) {
+    Object.assign(this, attrs);
   }
 }

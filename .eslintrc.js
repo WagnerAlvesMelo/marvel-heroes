@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['plugin:react/recommended', 'airbnb', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -30,6 +30,9 @@ module.exports = {
     'object-curly-newline': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/require-default-props': 'off',
+    'class-methods-use-this': 'off',
+    'no-useless-constructor': 'off',
+    '@typescript-eslint/no-namespace': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
