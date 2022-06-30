@@ -29,6 +29,7 @@ module.exports = {
     'lines-between-class-members': 'off',
     'object-curly-newline': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/require-default-props': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
