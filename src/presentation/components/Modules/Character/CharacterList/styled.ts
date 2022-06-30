@@ -9,5 +9,11 @@ export const Wrapper = styled.section`
 
 export const Grid = styled.ul`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, max(250px, 100% / 5)), 1fr));
+  gap: ${({ theme }) => theme.spacings.medium};
+  margin-top: ${({ theme }) => theme.spacings.xsmall};
+
+  li {
+    list-style: none;
+  }
 `;
