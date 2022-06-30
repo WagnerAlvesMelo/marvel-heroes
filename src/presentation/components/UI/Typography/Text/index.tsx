@@ -7,5 +7,6 @@ type Props<T extends React.ElementType> = React.PropsWithChildren<{
 
 export default function Text<T extends React.ElementType>({ as, children, align }: Props<T>) {
   const Component: React.ElementType = as;
+
   return <Component style={{ textAlign: align }}>{children}</Component>;
 }
