@@ -1,8 +1,10 @@
 import React from 'react';
-import CharacterService from 'presentation/hooks/service/contexts/character';
+import makeCharacterService from 'presentation/hooks/service/contexts/character';
+import makeApiClient from 'main/decorators/make-api-client/make-api-client';
 
+const apiClient = makeApiClient();
 const context = React.createContext({
-  characters: CharacterService(),
+  characters: makeCharacterService(apiClient),
 });
 
 const useServices = () => React.useContext(context);

@@ -1,6 +1,6 @@
 import { createGlobalStyle, css, DefaultTheme, GlobalStyleComponent } from 'styled-components';
 
-const GlobalStyles: GlobalStyleComponent<{ theme: DefaultTheme }, DefaultTheme> = createGlobalStyle`
+const GlobalStyles: GlobalStyleComponent<any, DefaultTheme> = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ const GlobalStyles: GlobalStyleComponent<{ theme: DefaultTheme }, DefaultTheme> 
     }
   }
 
-  ${({ theme }) => css`
+  ${({ theme }: { theme: DefaultTheme }) => css`
     html {
       font-size: 62.5%;
       display: flex;
@@ -35,6 +35,10 @@ const GlobalStyles: GlobalStyleComponent<{ theme: DefaultTheme }, DefaultTheme> 
       display: flex;
       flex: 1 1 0%;
       flex-direction: column;
+    }
+
+    * {
+      font-family: ${theme.font.family};
     }
   `}
 `;

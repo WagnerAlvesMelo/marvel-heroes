@@ -13,7 +13,7 @@ export default function CharacterList({ characters }: Props) {
       <CharacterListHeader />
       <S.Grid>
         {characters.map((character) => (
-          <li>{character}</li>
+          <li key={character?.toString()}>{character}</li>
         ))}
       </S.Grid>
     </S.Wrapper>

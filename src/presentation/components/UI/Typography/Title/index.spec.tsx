@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from 'utils/test';
 import Title from 'presentation/components/UI/Typography/Title/index';
 
 describe('Title', () => {

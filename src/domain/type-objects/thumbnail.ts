@@ -1,4 +1,4 @@
-import { ClassProps } from 'utils/types';
+import { ClassProps } from 'utils/protocols/types';
 
 export default class Thumbnail {
   path?: string;

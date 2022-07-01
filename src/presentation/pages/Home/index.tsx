@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import MainLayout from 'presentation/layouts/Main';
 import CharacterList from 'presentation/components/Modules/Character/CharacterList';
 import useServices from 'presentation/hooks/service/service';
-import Character from 'domain/models/Character';
+import Character from 'domain/models/Character/Character';
 import CharacterThumbnail from 'presentation/components/Modules/Character/CharacterThumbnail';
 
 export default function Home() {

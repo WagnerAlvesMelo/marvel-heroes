@@ -1,12 +1,10 @@
 import React from 'react';
 
-import makeApiClient from 'main/decorators/make-api-client/make-api-client';
 import CharactersService from 'service/characters/characters-service';
 import GetCharacters from 'service/characters/GetCharacters/get-characters';
+import { ApiClient } from 'infra/adapters/api/protocols/api-client';
 
-export default function CharacterService() {
-  const apiClient = makeApiClient();
-
+export default function makeCharacterService(apiClient: ApiClient) {
   const getCharacters = new GetCharacters(apiClient);
 
   return new CharactersService(getCharacters);

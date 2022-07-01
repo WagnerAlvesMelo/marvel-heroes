@@ -2,7 +2,7 @@ import Resource from 'domain/type-objects/resource';
 import Url from 'domain/type-objects/url';
 import Thumbnail from 'domain/type-objects/thumbnail';
 import { ClassType } from 'infra/adapters/class/type-mapper';
-import { ClassProps } from 'utils/types';
+import { ClassProps } from 'utils/protocols/types';
 
 type CharacterAttachment = {
   available: number;
@@ -26,7 +26,7 @@ export default class Character {
   @ClassType(() => Thumbnail)
   thumbnail!: Thumbnail;
 
-  constructor(attrs: ClassProps<Character>) {
+  constructor(attrs?: ClassProps<Character>) {
     Object.assign(this, attrs);
   }
 }

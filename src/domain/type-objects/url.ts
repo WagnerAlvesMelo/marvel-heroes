@@ -1,4 +1,4 @@
-import { ClassProps } from 'utils/types';
+import { ClassProps } from 'utils/protocols/types';
 
 type ConstructorType = {
   url: string | URL;
@@ -6,7 +6,7 @@ type ConstructorType = {
 
 export default class Url {
   type?: string;
-  url?: URL;
+  url?: URL | string;
 
   constructor(attrs?: ConstructorType & ClassProps<Url>) {
     Object.assign(this, { ...attrs, url: attrs?.url ? new URL(attrs?.url) : '' });

@@ -1,4 +1,4 @@
-import { GetCharacters } from 'service/characters/GetCharacters/protocols/get-characters';
+import { GetCharacters } from 'domain/use-cases/Character/getCharacters';
 
 export default class CharactersService {
   constructor(private readonly getCharactersService: GetCharacters) {}

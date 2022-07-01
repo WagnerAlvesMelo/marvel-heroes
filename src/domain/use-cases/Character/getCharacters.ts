@@ -1,4 +1,4 @@
-import Character from 'domain/models/Character';
+import Character from 'domain/models/Character/Character';
 import { Pagination } from 'infra/adapters/api/protocols/api-client';
 
 export interface GetCharacters {

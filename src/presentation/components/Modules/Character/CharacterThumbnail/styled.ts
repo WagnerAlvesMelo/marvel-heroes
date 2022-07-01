@@ -20,3 +20,9 @@ export const Icon = styled.img`
   height: 100%;
   box-shadow: 0 5px 0 0 ${({ theme }) => theme.colors.red};
 `;
+
+export const Info = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
