@@ -5,7 +5,7 @@ export const Wrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: ${({ theme }) => theme.spacings.xlarge};
+  margin-top: ${({ theme }) => theme.spacings.medium};
 
   font-size: ${({ theme }) => theme.font.sizes.medium};
 `;
@@ -22,7 +22,7 @@ export const FilterItem = styled.div`
   align-items: center;
 
   p {
-    font-size: ${({ theme }) => theme.font.sizes.xsmall};
+    font-size: ${({ theme }) => theme.font.sizes.small};
   }
 
   svg {

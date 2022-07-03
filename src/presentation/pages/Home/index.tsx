@@ -23,11 +23,7 @@ export default function Home() {
 
   return (
     <MainLayout>
-      <CharacterList
-        characters={characters.map((character) => (
-          <CharacterThumbnail character={character} />
-        ))}
-      />
+      <CharacterList characters={characters} />
     </MainLayout>
   );
 }

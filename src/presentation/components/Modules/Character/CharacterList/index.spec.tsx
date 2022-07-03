@@ -6,6 +6,6 @@ import CharacterThumbnail from 'presentation/components/Modules/Character/Charac
 
 describe('CharacterList', () => {
   it('should render a list with characters thumbnails', () => {
-    render(<CharacterList characters={[<CharacterThumbnail character={makeCharacterMock()} />]} />);
+    render(<CharacterList characters={[makeCharacterMock()]} />);
   });
 });

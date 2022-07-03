@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.a`
   width: 50%;
   position: relative;
+  cursor: pointer;
 
   &:after {
     content: '';
@@ -25,4 +26,5 @@ export const Info = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin-top: ${({ theme }) => theme.spacings.xsmall};
 `;
