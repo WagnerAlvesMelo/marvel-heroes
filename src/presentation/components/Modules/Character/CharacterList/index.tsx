@@ -1,16 +1,13 @@
-import React from 'react';
-
-import Character from 'domain/models/Character/Character';
+import React, { useContext } from 'react';
 import CharacterListHeader from 'presentation/components/Modules/Character/CharacterList/Header';
 import CharacterThumbnail from 'presentation/components/Modules/Character/CharacterThumbnail';
-import FavoriteCharacterContextProvider from 'presentation/hooks/modules/character/favorites';
+import FavoriteCharacterContextProvider from 'presentation/contexts/modules/character/favorites';
+import { CharacterSearchContext } from 'presentation/contexts/modules/character/search';
 import * as S from './styled';
 
-type Props = {
-  characters: Character[];
-};
+export default function CharacterList() {
+  const { characters } = useContext(CharacterSearchContext);
 
-export default function CharacterList({ characters }: Props) {
   return (
     <FavoriteCharacterContextProvider>
       <S.Wrapper>

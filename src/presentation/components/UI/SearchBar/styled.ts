@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.form`
   position: relative;
   width: 60%;
-  margin-top: ${({ theme }) => theme.spacings.medium};
 `;
 
 export const Input = styled.input.attrs({ type: 'text' })`
@@ -12,9 +11,14 @@ export const Input = styled.input.attrs({ type: 'text' })`
   border-radius: 50px;
   outline: none;
   border: none;
-  background-color: bisque;
+  background-color: #fdecec;
+  color: #ff0000;
   font-size: ${({ theme }) => theme.font.sizes.large};
   padding-left: ${({ theme }) => theme.spacings.xxlarge};
+
+  &::placeholder {
+    color: #ff0000;
+  }
 `;
 
 export const IconWrapper = styled.div`

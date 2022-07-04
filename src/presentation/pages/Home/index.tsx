@@ -1,29 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import MainLayout from 'presentation/layouts/Main';
 import CharacterList from 'presentation/components/Modules/Character/CharacterList';
-import useServices from 'presentation/hooks/service/service';
-import Character from 'domain/models/Character/Character';
-import CharacterThumbnail from 'presentation/components/Modules/Character/CharacterThumbnail';
+import CharacterSearchContextProvider from 'presentation/contexts/modules/character/search';
 
 export default function Home() {
-  const services = useServices();
-
-  const [characters, setCharacters] = useState<Character[]>([]);
-
-  useEffect(() => {
-    try {
-      services.characters.getCharacters().then((res) => {
-        setCharacters(res.results);
-      });
-    } catch (e) {
-      console.log(e);
-    }
-  }, []);
-
   return (
-    <MainLayout>
-      <CharacterList characters={characters} />
-    </MainLayout>
+    <CharacterSearchContextProvider>
+      <MainLayout headerMode="full">
+        <CharacterList />
+      </MainLayout>
+    </CharacterSearchContextProvider>
   );
 }

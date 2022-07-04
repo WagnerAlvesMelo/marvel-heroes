@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const Wrapper = styled.a`
+export const Wrapper = styled(Link)`
   width: 50%;
   position: relative;
   cursor: pointer;
@@ -14,7 +15,6 @@ export const Wrapper = styled.a`
 
 export const Icon = styled.img`
   position: absolute;
-  opacity: 1;
   top: 0;
   left: 0;
   width: 100%;

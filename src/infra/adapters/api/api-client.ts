@@ -14,6 +14,7 @@ export default class ApiClient implements IApiClient {
     } = await axios.request({
       ...params,
       params: {
+        ...params.params,
         ts: timestamp,
         apikey: process.env.REACT_APP_API_PUBLIC_KEY,
         hash: createAuthHash(timestamp),

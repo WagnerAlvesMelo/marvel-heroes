@@ -3,6 +3,7 @@ import React from 'react';
 import Text from 'presentation/components/UI/Typography/Text';
 import { ReactComponent as HeroIcon } from 'assets/ic_heroi.svg';
 import { ReactComponent as FavoriteIcon } from 'assets/favorito_03.svg';
+import Toggle from 'presentation/components/UI/Toggle';
 import * as S from './styled';
 
 export default function CharacterListHeader() {
@@ -14,7 +15,7 @@ export default function CharacterListHeader() {
           <HeroIcon aria-label="Ordenar por nome" />
           <Text as="p">Ordenar por nome - A/Z</Text>
         </S.FilterItem>
-        <p>RADIO</p>
+        <Toggle />
         <S.FilterItem>
           <FavoriteIcon aria-label="Somente favoritos" />
           <Text as="p">Somente Favoritos</Text>

@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import Character from 'domain/models/Character/Character';
 import { ReactComponent as FilledHearth } from 'assets/favorito_01.svg';
 import { ReactComponent as OutlinedHearth } from 'assets/favorito_02.svg';
-import { FavoritesContext } from 'presentation/hooks/modules/character/favorites';
+import { FavoritesContext } from 'presentation/contexts/modules/character/favorites';
 
 type Props = {
   character: Character;

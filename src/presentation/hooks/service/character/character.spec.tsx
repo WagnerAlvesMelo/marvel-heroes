@@ -1,5 +1,4 @@
-import React from 'react';
-import makeCharacterService from 'presentation/hooks/service/contexts/character';
+import makeCharacterService from 'presentation/hooks/service/character/character';
 import { ApiClientSpy } from 'infra/adapters/api/mocks/api-client-spy';
 
 describe('CharacterService', () => {

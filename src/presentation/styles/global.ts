@@ -18,23 +18,27 @@ const GlobalStyles: GlobalStyleComponent<any, DefaultTheme> = createGlobalStyle`
     html {
       font-size: 62.5%;
       display: flex;
-      flex: 1;
       flex-direction: column;
       width: 100%;
+      min-height: 100%;
     }
 
     body {
-      font-family: ${theme.font.family};
-      font-size: ${theme.font.sizes.medium};
+      height: 100%;
+      min-height: 100%;
       display: flex;
       flex: 1 1 0%;
       flex-direction: column;
+      font-family: ${theme.font.family};
+      font-size: ${theme.font.sizes.medium};
     }
 
     #root {
       display: flex;
       flex: 1 1 0%;
       flex-direction: column;
+      min-height: 100%;
+      overflow-y: auto;
     }
 
     * {

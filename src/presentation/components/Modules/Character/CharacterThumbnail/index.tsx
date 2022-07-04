@@ -12,7 +12,7 @@ type Props = {
 export default function CharacterThumbnail({ character }: Props) {
   return (
     <>
-      <S.Wrapper key={character.id}>
+      <S.Wrapper to={`character/${character.id}`} key={character.id}>
         <S.Icon src={character.thumbnail.mountedThumbnail} alt={character.name} />
       </S.Wrapper>
       <S.Info>
