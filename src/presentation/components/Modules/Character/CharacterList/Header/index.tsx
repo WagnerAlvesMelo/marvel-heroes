@@ -1,30 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import Text from 'presentation/components/UI/Typography/Text';
 import { ReactComponent as HeroIcon } from 'assets/ic_heroi.svg';
 import { ReactComponent as FavoriteIcon } from 'assets/favorito_03.svg';
-import Toggle from 'presentation/components/UI/Toggle';
+import { CharacterSearchContext } from 'presentation/contexts/modules/character/search';
 import * as S from './styled';
 
 export default function CharacterListHeader() {
+  const search = useContext(CharacterSearchContext);
+
   return (
     <S.Wrapper>
       <Text as="span" weight="bold">
-        Encontrados 20 heróis
+        {`Encontrados ${search.totalCharacters} heróis`}
       </Text>
       <S.Filters>
-        <S.FilterItem>
+        <S.FilterItem selected={search.orderByName} onClick={search.toggleOrderByName}>
           <HeroIcon aria-label="Ordenar por nome" />
-          <Text as="p" color="primary">
-            Ordenar por nome - A/Z
-          </Text>
+          <Text as="p">Ordenar por nome - A/Z</Text>
         </S.FilterItem>
-        <Toggle />
-        <S.FilterItem>
+        <S.FilterItem selected={search.favoritesOnly} onClick={search.toggleFavoritesOnly}>
           <FavoriteIcon aria-label="Somente favoritos" />
-          <Text as="p" color="primary">
-            Somente Favoritos
-          </Text>
+          <Text as="p">Somente Favoritos</Text>
         </S.FilterItem>
       </S.Filters>
     </S.Wrapper>

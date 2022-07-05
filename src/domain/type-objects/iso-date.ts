@@ -1,7 +1,5 @@
 export default class IsoDate {
-  date!: string;
-
-  constructor(date: string) {
+  constructor(private readonly date: string) {
     this.date = date;
   }
 

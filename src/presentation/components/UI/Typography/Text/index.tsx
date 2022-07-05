@@ -20,7 +20,7 @@ export default function Text<T extends React.ElementType>({
 
   return (
     <Component
-      style={{ textAlign: align, color: theme.colors[color || 'text'], fontWeight: weight }}
+      style={{ textAlign: align, color: color && theme.colors[color], fontWeight: weight }}
     >
       {children}
     </Component>

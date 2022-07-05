@@ -34,7 +34,7 @@ export const TotalizersWrapper = styled.div`
     display: flex;
     flex-direction: column;
 
-    h5 {
+    h4 {
       margin-bottom: ${({ theme }) => theme.spacings.xxsmall};
     }
   }
@@ -45,11 +45,11 @@ export const HorizontalAlignedBox = styled.div`
   align-items: center;
 
   & + div {
-    margin-top: ${({ theme }) => theme.spacings.xsmall};
+    margin-top: ${({ theme }) => theme.spacings.small};
   }
 
   svg,
-  h5 {
+  h4 {
     margin-right: ${({ theme }) => theme.spacings.xxsmall};
   }
 `;

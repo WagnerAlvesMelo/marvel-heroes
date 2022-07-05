@@ -38,7 +38,10 @@ export default function CharacterDetails() {
     <CharacterSearchContextProvider>
       <MainLayout headerMode="search">
         <FavoriteCharacterContextProvider>
-          <CharacterOverview lastComic="" character={character} />
+          <CharacterOverview
+            lastComic={latestComic?.date.toLocaleDateString()}
+            character={character}
+          />
         </FavoriteCharacterContextProvider>
         <ComicList comics={comics} />
       </MainLayout>

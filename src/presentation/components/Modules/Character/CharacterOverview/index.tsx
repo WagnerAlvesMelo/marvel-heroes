@@ -29,7 +29,7 @@ export default function CharacterOverview({ character, lastComic }: Props) {
         <Text as="p">{character?.description || 'Personagem sem descrição'}</Text>
         <S.TotalizersWrapper>
           <div>
-            <Title level={5}>Quadrinhos</Title>
+            <Title level={4}>Quadrinhos</Title>
             <S.HorizontalAlignedBox>
               <HQIcon />
               <Text as="span" color="title">
@@ -38,7 +38,7 @@ export default function CharacterOverview({ character, lastComic }: Props) {
             </S.HorizontalAlignedBox>
           </div>
           <div>
-            <Title level={5}>Filmes</Title>
+            <Title level={4}>Filmes</Title>
             <S.HorizontalAlignedBox>
               <MovieIcon />
               <Text as="span" color="title">
@@ -48,11 +48,11 @@ export default function CharacterOverview({ character, lastComic }: Props) {
           </div>
         </S.TotalizersWrapper>
         <S.HorizontalAlignedBox>
-          <Title level={5}>Rating:</Title>
+          <Title level={4}>Rating:</Title>
           <Rating />
         </S.HorizontalAlignedBox>
         <S.HorizontalAlignedBox>
-          <Title level={5}>Úlitmo quadrinho:</Title>
+          <Title level={4}>Último quadrinho:</Title>
           <Text as="span">{lastComic}</Text>
         </S.HorizontalAlignedBox>
       </S.CharacterInfos>

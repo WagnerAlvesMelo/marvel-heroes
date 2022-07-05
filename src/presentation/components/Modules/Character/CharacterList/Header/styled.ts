@@ -17,16 +17,21 @@ export const Filters = styled.div`
   gap: ${({ theme }) => theme.spacings.small};
 `;
 
-export const FilterItem = styled.div`
+export const FilterItem = styled.div<{ selected: boolean }>`
   display: flex;
   align-items: center;
   cursor: pointer;
 
   p {
     font-size: ${({ theme }) => theme.font.sizes.small};
+    color: ${({ theme, selected }) => (selected ? theme.colors.primary : theme.colors.text)};
   }
 
   svg {
     margin-right: ${({ theme }) => theme.spacings.xxsmall};
+
+    g {
+      fill: ${({ theme, selected }) => (selected ? theme.colors.primary : theme.colors.text)};
+    }
   }
 `;

@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import CharacterListHeader from 'presentation/components/Modules/Character/CharacterList/Header';
 import CharacterThumbnail from 'presentation/components/Modules/Character/CharacterThumbnail';
-import FavoriteCharacterContextProvider from 'presentation/contexts/modules/character/favorites';
 import { CharacterSearchContext } from 'presentation/contexts/modules/character/search';
 import * as S from './styled';
 
@@ -9,17 +8,15 @@ export default function CharacterList() {
   const { characters } = useContext(CharacterSearchContext);
 
   return (
-    <FavoriteCharacterContextProvider>
-      <S.Wrapper>
-        <CharacterListHeader />
-        <S.Grid>
-          {characters.map((character) => (
-            <li key={character.id}>
-              <CharacterThumbnail character={character} />
-            </li>
-          ))}
-        </S.Grid>
-      </S.Wrapper>
-    </FavoriteCharacterContextProvider>
+    <S.Wrapper>
+      <CharacterListHeader />
+      <S.Grid>
+        {characters.map((character) => (
+          <li key={character.id}>
+            <CharacterThumbnail character={character} />
+          </li>
+        ))}
+      </S.Grid>
+    </S.Wrapper>
   );
 }
