@@ -16,3 +16,20 @@ export const Grid = styled.ul`
     list-style: none;
   }
 `;
+
+export const NotFoundText = styled.div`
+  text-align: center;
+  color: ${({ theme }) => theme.colors.primary};
+  padding: ${({ theme }) => theme.spacings.large};
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+`;
+
+export const LoadingWrapper = styled.div`
+  padding: ${({ theme }) => theme.spacings.xlarge};
+  display: flex;
+  justify-content: center;
+`;

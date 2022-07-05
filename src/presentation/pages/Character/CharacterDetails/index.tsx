@@ -10,7 +10,8 @@ import CharacterOverview from 'presentation/components/Modules/Character/Charact
 import Logo from 'presentation/components/UI/Logo';
 import SearchBar from 'presentation/components/UI/SearchBar';
 import { CharacterSearchContext } from 'presentation/contexts/modules/character/search';
-import Header from './styled';
+import LoadingIcon from 'presentation/components/UI/LoadingIcon';
+import * as S from './styled';
 
 export default function CharacterDetails() {
   const services = useServices();
@@ -19,6 +20,7 @@ export default function CharacterDetails() {
   const { id } = useParams<{ id: string }>();
   const [character, setCharacter] = useState<Character>();
   const [comics, setComics] = useState<Comic[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getCharacter = async () => {
     const { results } = await services.characters.getCharacterById(Number(id));
@@ -28,6 +30,7 @@ export default function CharacterDetails() {
   const getComics = async () => {
     const { results } = await services.comics.getComicsByCharacterId(Number(id));
     setComics(results);
+    setIsLoading(false);
   };
 
   const latestComic = comics?.[0]?.dates.find((date) => date.type === 'onsaleDate');
@@ -43,12 +46,23 @@ export default function CharacterDetails() {
 
   return (
     <MainLayout>
-      <Header>
+      <S.Header>
         <Logo size="default" />
         <SearchBar onSubmit={handleSubmit} />
-      </Header>
-      <CharacterOverview lastComic={latestComic?.date.toLocaleDateString()} character={character} />
-      <ComicList comics={comics} />
+      </S.Header>
+      {isLoading ? (
+        <S.LoadingWrapper>
+          <LoadingIcon />
+        </S.LoadingWrapper>
+      ) : (
+        <>
+          <CharacterOverview
+            lastComic={latestComic?.date.toLocaleDateString()}
+            character={character}
+          />
+          <ComicList comics={comics} />
+        </>
+      )}
     </MainLayout>
   );
 }

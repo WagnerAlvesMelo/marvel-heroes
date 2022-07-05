@@ -10,6 +10,7 @@ type ContextParams = {
   favoritesOnly: boolean;
   orderByName: boolean;
   searchQuery: string | undefined;
+  isLoading: boolean;
   toggleFavoritesOnly: () => void;
   toggleOrderByName: () => void;
   setSearchQuery: (query?: string) => void;
@@ -25,14 +26,17 @@ export default function CharacterSearchContextProvider({ children }: PropsWithCh
   const [totalCharacters, setTotalCharacters] = useState<number>(0);
   const [favoritesOnly, setFavoritesOnly] = useState<boolean>(false);
   const [orderByName, setOrderByName] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [searchQuery, setSearchQuery] = useState<string | undefined>(undefined);
 
   const searchCharacter = async (page?: number) => {
+    setIsLoading(true);
     const apiResponse = await services.characters.getCharacters({
       nameStartsWith: searchQuery,
       offset: (page || 0) * 20,
     });
     Promise.all([setCharacters(apiResponse.results), setTotalCharacters(apiResponse.total)]);
+    setIsLoading(false);
   };
 
   const changeSearchQuery = (value?: string) => {
@@ -50,7 +54,13 @@ export default function CharacterSearchContextProvider({ children }: PropsWithCh
   const sortByName = (a: Character, b: Character) => a.name.localeCompare(b.name);
 
   const formattedCharacters = () => {
-    const list = (favoritesOnly ? favorites : characters) || [];
+    const favoriteFilter = (character: Character) => {
+      const characterName = searchQuery?.toLowerCase() || '';
+      return searchQuery ? character.name.toLowerCase().includes(characterName) : true;
+    };
+    const filteredFavorites = favorites?.filter(favoriteFilter);
+
+    const list = (favoritesOnly ? filteredFavorites : characters) || [];
 
     return orderByName ? [...list].sort(sortByName) : list;
   };
@@ -64,12 +74,13 @@ export default function CharacterSearchContextProvider({ children }: PropsWithCh
       favoritesOnly,
       orderByName,
       searchQuery,
+      isLoading,
       searchCharacter,
       setSearchQuery: changeSearchQuery,
       toggleFavoritesOnly,
       toggleOrderByName,
     };
-  }, [characters, totalCharacters, favoritesOnly, orderByName, favorites, searchQuery]);
+  }, [characters, totalCharacters, favoritesOnly, orderByName, favorites, searchQuery, isLoading]);
 
   return (
     <CharacterSearchContext.Provider value={contextValues}>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Header = styled.header`
+export const Header = styled.header`
   display: flex;
   align-items: center;
   width: 100%;
@@ -16,4 +16,8 @@ const Header = styled.header`
   }
 `;
 
-export default Header;
+export const LoadingWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: ${({ theme }) => theme.spacings.xlarge};
+`;
