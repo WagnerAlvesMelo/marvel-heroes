@@ -16,6 +16,6 @@ export default class GetComicsByCharacterId implements IGetComicsByCharacterId {
       },
     });
 
-    return { ...data, results: plainToClassInstance(Comic, data.results) };
+    return { ...data, results: plainToClassInstance(Comic, data?.results) };
   }
 }

@@ -12,6 +12,6 @@ export default class GetCharacterById implements IGetCharacterById {
       url: `/characters/${params}`,
     });
 
-    return { ...data, results: plainToClassInstance(Character, data.results?.[0]) };
+    return { ...data, results: plainToClassInstance(Character, data?.results?.[0]) };
   }
 }
