@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/marvel-heroes/static/css/main.039bf95e.css",
-    "main.js": "/marvel-heroes/static/js/main.7c324e45.js",
+    "main.js": "/marvel-heroes/static/js/main.3420aaf9.js",
     "static/media/hulk.png": "/marvel-heroes/static/media/hulk.be72a9539beaba25254f.png",
     "static/media/deadpool_fail.png": "/marvel-heroes/static/media/deadpool_fail.ac4699bf9e2db8b9c530.png",
     "static/media/loading.gif": "/marvel-heroes/static/media/loading.9fadc41768043b41f7cd.gif",
@@ -16,10 +16,10 @@
     "static/media/favorito_03.svg": "/marvel-heroes/static/media/favorito_03.ff463c11cd808c460ddde196512165b8.svg",
     "index.html": "/marvel-heroes/index.html",
     "main.039bf95e.css.map": "/marvel-heroes/static/css/main.039bf95e.css.map",
-    "main.7c324e45.js.map": "/marvel-heroes/static/js/main.7c324e45.js.map"
+    "main.3420aaf9.js.map": "/marvel-heroes/static/js/main.3420aaf9.js.map"
   },
   "entrypoints": [
     "static/css/main.039bf95e.css",
-    "static/js/main.7c324e45.js"
+    "static/js/main.3420aaf9.js"
   ]
 }
