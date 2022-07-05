@@ -1,7 +1,6 @@
 import React, { createContext, PropsWithChildren, useContext, useMemo, useState } from 'react';
 
 import Character from 'domain/models/Character/Character';
-import { GetCharacters } from 'domain/use-cases/Character/getCharacters';
 import useServices from 'presentation/hooks/service/service';
 import { FavoritesContext } from '../favorites';
 
@@ -10,9 +9,11 @@ type ContextParams = {
   totalCharacters: number;
   favoritesOnly: boolean;
   orderByName: boolean;
+  searchQuery: string | undefined;
   toggleFavoritesOnly: () => void;
   toggleOrderByName: () => void;
-  searchCharacter: (params?: GetCharacters.Params, page?: number) => void;
+  setSearchQuery: (query?: string) => void;
+  searchCharacter: (page?: number) => void;
 };
 
 export const CharacterSearchContext = createContext({} as ContextParams);
@@ -24,13 +25,18 @@ export default function CharacterSearchContextProvider({ children }: PropsWithCh
   const [totalCharacters, setTotalCharacters] = useState<number>(0);
   const [favoritesOnly, setFavoritesOnly] = useState<boolean>(false);
   const [orderByName, setOrderByName] = useState<boolean>(false);
+  const [searchQuery, setSearchQuery] = useState<string | undefined>(undefined);
 
-  const searchCharacter = async (params?: GetCharacters.Params, page?: number) => {
+  const searchCharacter = async (page?: number) => {
     const apiResponse = await services.characters.getCharacters({
-      ...params,
+      nameStartsWith: searchQuery,
       offset: (page || 0) * 20,
     });
     Promise.all([setCharacters(apiResponse.results), setTotalCharacters(apiResponse.total)]);
+  };
+
+  const changeSearchQuery = (value?: string) => {
+    setSearchQuery(value || undefined);
   };
 
   const toggleFavoritesOnly = () => {
@@ -46,11 +52,7 @@ export default function CharacterSearchContextProvider({ children }: PropsWithCh
   const formattedCharacters = () => {
     const list = (favoritesOnly ? favorites : characters) || [];
 
-    if (orderByName) {
-      return [...list].sort(sortByName);
-    }
-
-    return list;
+    return orderByName ? [...list].sort(sortByName) : list;
   };
 
   const contextValues: ContextParams = useMemo(() => {
@@ -61,11 +63,13 @@ export default function CharacterSearchContextProvider({ children }: PropsWithCh
       totalCharacters: favoritesOnly ? charactersToReturn.length : totalCharacters,
       favoritesOnly,
       orderByName,
+      searchQuery,
       searchCharacter,
+      setSearchQuery: changeSearchQuery,
       toggleFavoritesOnly,
       toggleOrderByName,
     };
-  }, [characters, totalCharacters, favoritesOnly, orderByName, favorites]);
+  }, [characters, totalCharacters, favoritesOnly, orderByName, favorites, searchQuery]);
 
   return (
     <CharacterSearchContext.Provider value={contextValues}>

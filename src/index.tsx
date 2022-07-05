@@ -8,12 +8,18 @@ import 'react-toastify/dist/ReactToastify.css';
 import GlobalStyles from 'presentation/styles/global';
 import Theme from 'presentation/styles/theme';
 import Router from 'main/router';
+import CharacterSearchContextProvider from 'presentation/contexts/modules/character/search';
+import FavoriteCharacterContextProvider from 'presentation/contexts/modules/character/favorites';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <ThemeProvider theme={Theme}>
-    <GlobalStyles />
-    <Router />
-    <ToastContainer />
+    <FavoriteCharacterContextProvider>
+      <CharacterSearchContextProvider>
+        <GlobalStyles />
+        <Router />
+        <ToastContainer />
+      </CharacterSearchContextProvider>
+    </FavoriteCharacterContextProvider>
   </ThemeProvider>,
 );
