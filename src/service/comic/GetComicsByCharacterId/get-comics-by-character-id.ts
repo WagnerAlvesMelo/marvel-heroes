@@ -12,6 +12,7 @@ export default class GetComicsByCharacterId implements IGetComicsByCharacterId {
       url: `/characters/${id}/comics`,
       params: {
         orderBy: '-onsaleDate',
+        limit: 10,
       },
     });
 

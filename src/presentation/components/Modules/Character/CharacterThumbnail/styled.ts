@@ -19,7 +19,7 @@ export const Icon = styled.img`
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0 5px 0 0 ${({ theme }) => theme.colors.red};
+  box-shadow: 0 5px 0 0 ${({ theme }) => theme.colors.primary};
 `;
 
 export const Info = styled.div`

@@ -49,6 +49,7 @@ export default function CharacterOverview({ character, lastComic }: Props) {
         </S.HorizontalAlignedBox>
         <S.HorizontalAlignedBox>
           <Title level={5}>Úlitmo quadrinho:</Title>
+          <Text as="span">{lastComic}</Text>
         </S.HorizontalAlignedBox>
       </S.CharacterInfos>
       <S.CharacterBanner src={HulkImage} />

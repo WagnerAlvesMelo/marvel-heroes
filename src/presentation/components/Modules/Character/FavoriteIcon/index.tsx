@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
+import { toast } from 'react-toastify';
 
 import Character from 'domain/models/Character/Character';
 import { ReactComponent as FilledHearth } from 'assets/favorito_01.svg';
 import { ReactComponent as OutlinedHearth } from 'assets/favorito_02.svg';
 import { FavoritesContext } from 'presentation/contexts/modules/character/favorites';
+import Wrapper from './styled';
 
 type Props = {
   character: Character;
@@ -16,9 +18,23 @@ export default function CharacterFavoriteIcon({ character }: Props) {
 
   const isCharacterFavorite = favorites?.some((listCharacter) => listCharacter.id === character.id);
 
-  return isCharacterFavorite ? (
-    <FilledHearth onClick={() => removeFavorite(character)} />
-  ) : (
-    <OutlinedHearth onClick={() => addFavorite(character)} />
+  const handleAddFavorite = () => {
+    try {
+      addFavorite(character);
+    } catch (error) {
+      if (error instanceof Error) {
+        toast(error.message, { type: 'error', position: 'bottom-right' });
+      }
+    }
+  };
+
+  return (
+    <Wrapper style={{ cursor: 'pointer' }}>
+      {isCharacterFavorite ? (
+        <FilledHearth onClick={() => removeFavorite(character)} />
+      ) : (
+        <OutlinedHearth onClick={() => handleAddFavorite()} />
+      )}
+    </Wrapper>
   );
 }

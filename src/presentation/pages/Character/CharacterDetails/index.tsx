@@ -26,15 +26,19 @@ export default function CharacterDetails() {
     setComics(results);
   };
 
+  const latestComic = comics?.[0]?.dates.find((date) => date.type === 'onsaleDate');
+
   useEffect(() => {
     Promise.all([getCharacter(), getComics()]);
   }, []);
+
+  console.log(latestComic?.date);
 
   return (
     <CharacterSearchContextProvider>
       <MainLayout headerMode="search">
         <FavoriteCharacterContextProvider>
-          <CharacterOverview character={character} />
+          <CharacterOverview lastComic="" character={character} />
         </FavoriteCharacterContextProvider>
         <ComicList comics={comics} />
       </MainLayout>

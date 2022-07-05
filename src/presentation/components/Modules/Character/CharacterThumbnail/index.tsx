@@ -16,7 +16,9 @@ export default function CharacterThumbnail({ character }: Props) {
         <S.Icon src={character.thumbnail.mountedThumbnail} alt={character.name} />
       </S.Wrapper>
       <S.Info>
-        <Text as="span">{character.name}</Text>
+        <Text as="span" color="title">
+          {character.name}
+        </Text>
         <CharacterFavoriteIcon character={character} />
       </S.Info>
     </>

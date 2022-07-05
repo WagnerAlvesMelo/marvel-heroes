@@ -20,6 +20,7 @@ export const Filters = styled.div`
 export const FilterItem = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   p {
     font-size: ${({ theme }) => theme.font.sizes.small};
