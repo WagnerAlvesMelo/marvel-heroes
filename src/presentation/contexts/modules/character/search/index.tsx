@@ -1,11 +1,4 @@
-import React, {
-  createContext,
-  PropsWithChildren,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, { createContext, PropsWithChildren, useContext, useMemo, useState } from 'react';
 
 import Character from 'domain/models/Character/Character';
 import { GetCharacters } from 'domain/use-cases/Character/getCharacters';

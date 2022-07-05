@@ -32,8 +32,6 @@ export default function CharacterDetails() {
     Promise.all([getCharacter(), getComics()]);
   }, []);
 
-  console.log(latestComic?.date);
-
   return (
     <CharacterSearchContextProvider>
       <MainLayout headerMode="search">

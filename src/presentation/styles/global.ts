@@ -1,6 +1,7 @@
 import { createGlobalStyle, css, DefaultTheme, GlobalStyleComponent } from 'styled-components';
 
-const GlobalStyles: GlobalStyleComponent<any, DefaultTheme> = createGlobalStyle`
+// eslint-disable-next-line @typescript-eslint/ban-types
+const GlobalStyles: GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;

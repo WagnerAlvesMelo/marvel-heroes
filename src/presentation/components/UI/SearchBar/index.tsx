@@ -1,5 +1,5 @@
 import React, { FormEvent, useContext, useEffect, useRef, useState } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { useSearchParams } from 'react-router-dom';
 
 import { ReactComponent as SearchIcon } from 'assets/ic_busca_menor.svg';
