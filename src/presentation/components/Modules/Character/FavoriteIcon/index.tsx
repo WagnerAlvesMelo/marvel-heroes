@@ -28,13 +28,17 @@ export default function CharacterFavoriteIcon({ character }: Props) {
     }
   };
 
+  const handleClick = () => {
+    if (isCharacterFavorite) {
+      removeFavorite(character);
+    } else {
+      handleAddFavorite();
+    }
+  };
+
   return (
-    <Wrapper style={{ cursor: 'pointer' }}>
-      {isCharacterFavorite ? (
-        <FilledHearth onClick={() => removeFavorite(character)} />
-      ) : (
-        <OutlinedHearth onClick={() => handleAddFavorite()} />
-      )}
+    <Wrapper favorite={isCharacterFavorite} style={{ cursor: 'pointer' }}>
+      <OutlinedHearth onClick={handleClick} />
     </Wrapper>
   );
 }
