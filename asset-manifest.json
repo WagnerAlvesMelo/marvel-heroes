@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/marvel-heroes/static/css/main.039bf95e.css",
-    "main.js": "/marvel-heroes/static/js/main.7b464eb4.js",
+    "main.js": "/marvel-heroes/static/js/main.182391b0.js",
     "static/media/hulk.png": "/marvel-heroes/static/media/hulk.be72a9539beaba25254f.png",
     "static/media/deadpool_fail.png": "/marvel-heroes/static/media/deadpool_fail.ac4699bf9e2db8b9c530.png",
     "static/media/loading.gif": "/marvel-heroes/static/media/loading.9fadc41768043b41f7cd.gif",
@@ -11,15 +11,15 @@
     "static/media/ic_trailer.svg": "/marvel-heroes/static/media/ic_trailer.a3eecf661918db93d1ef28ca4d3726dd.svg",
     "static/media/ic_quadrinhos.svg": "/marvel-heroes/static/media/ic_quadrinhos.7e8c32136c710803f430e7ddd731fd6a.svg",
     "static/media/ic_busca_menor.svg": "/marvel-heroes/static/media/ic_busca_menor.7d4fff01c3fd233f60ebadb0ffbfd665.svg",
+    "static/media/avaliacao_on.svg": "/marvel-heroes/static/media/avaliacao_on.b50ecbbfb4e1d6138afa027902b97bfb.svg",
     "static/media/favorito_02.svg": "/marvel-heroes/static/media/favorito_02.d84c4d2f159ae482a79d538255ec754a.svg",
-    "static/media/favorito_01.svg": "/marvel-heroes/static/media/favorito_01.4032fb6a35d9a756a3b67961522b5f0f.svg",
     "static/media/favorito_03.svg": "/marvel-heroes/static/media/favorito_03.ff463c11cd808c460ddde196512165b8.svg",
     "index.html": "/marvel-heroes/index.html",
     "main.039bf95e.css.map": "/marvel-heroes/static/css/main.039bf95e.css.map",
-    "main.7b464eb4.js.map": "/marvel-heroes/static/js/main.7b464eb4.js.map"
+    "main.182391b0.js.map": "/marvel-heroes/static/js/main.182391b0.js.map"
   },
   "entrypoints": [
     "static/css/main.039bf95e.css",
-    "static/js/main.7b464eb4.js"
+    "static/js/main.182391b0.js"
   ]
 }
