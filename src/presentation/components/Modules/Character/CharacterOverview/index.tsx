@@ -32,14 +32,18 @@ export default function CharacterOverview({ character, lastComic }: Props) {
             <Title level={5}>Quadrinhos</Title>
             <S.HorizontalAlignedBox>
               <HQIcon />
-              <Text as="span">{character.comics.available}</Text>
+              <Text as="span" color="title">
+                {character.comics.available}
+              </Text>
             </S.HorizontalAlignedBox>
           </div>
           <div>
             <Title level={5}>Filmes</Title>
             <S.HorizontalAlignedBox>
               <MovieIcon />
-              <Text as="span">{character.series.available}</Text>
+              <Text as="span" color="title">
+                {character.series.available}
+              </Text>
             </S.HorizontalAlignedBox>
           </div>
         </S.TotalizersWrapper>
