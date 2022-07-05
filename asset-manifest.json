@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/marvel-heroes/static/css/main.039bf95e.css",
-    "main.js": "/marvel-heroes/static/js/main.6ced73a4.js",
-    "static/media/hulk.png": "/marvel-heroes/static/media/hulk.be72a9539beaba25254f.png",
-    "static/media/logo.svg": "/marvel-heroes/static/media/logo.42bf435da70f6dd2e0f57bbf31626fe1.svg",
-    "static/media/logo_menor.svg": "/marvel-heroes/static/media/logo_menor.09f0033940058a0480cc4b92ed09c7e6.svg",
-    "static/media/ic_heroi.svg": "/marvel-heroes/static/media/ic_heroi.401cb5f19924fa11ff45f0c863b6da28.svg",
-    "static/media/ic_trailer.svg": "/marvel-heroes/static/media/ic_trailer.a3eecf661918db93d1ef28ca4d3726dd.svg",
-    "static/media/ic_quadrinhos.svg": "/marvel-heroes/static/media/ic_quadrinhos.7e8c32136c710803f430e7ddd731fd6a.svg",
-    "static/media/ic_busca_menor.svg": "/marvel-heroes/static/media/ic_busca_menor.7d4fff01c3fd233f60ebadb0ffbfd665.svg",
-    "static/media/favorito_02.svg": "/marvel-heroes/static/media/favorito_02.d84c4d2f159ae482a79d538255ec754a.svg",
-    "static/media/favorito_01.svg": "/marvel-heroes/static/media/favorito_01.4032fb6a35d9a756a3b67961522b5f0f.svg",
-    "static/media/favorito_03.svg": "/marvel-heroes/static/media/favorito_03.ff463c11cd808c460ddde196512165b8.svg",
-    "index.html": "/marvel-heroes/index.html",
-    "main.039bf95e.css.map": "/marvel-heroes/static/css/main.039bf95e.css.map",
-    "main.6ced73a4.js.map": "/marvel-heroes/static/js/main.6ced73a4.js.map"
+    "main.css": "/static/css/main.039bf95e.css",
+    "main.js": "/static/js/main.fb953b2c.js",
+    "static/media/hulk.png": "/static/media/hulk.be72a9539beaba25254f.png",
+    "static/media/logo.svg": "/static/media/logo.42bf435da70f6dd2e0f57bbf31626fe1.svg",
+    "static/media/logo_menor.svg": "/static/media/logo_menor.09f0033940058a0480cc4b92ed09c7e6.svg",
+    "static/media/ic_heroi.svg": "/static/media/ic_heroi.401cb5f19924fa11ff45f0c863b6da28.svg",
+    "static/media/ic_trailer.svg": "/static/media/ic_trailer.a3eecf661918db93d1ef28ca4d3726dd.svg",
+    "static/media/ic_quadrinhos.svg": "/static/media/ic_quadrinhos.7e8c32136c710803f430e7ddd731fd6a.svg",
+    "static/media/ic_busca_menor.svg": "/static/media/ic_busca_menor.7d4fff01c3fd233f60ebadb0ffbfd665.svg",
+    "static/media/favorito_02.svg": "/static/media/favorito_02.d84c4d2f159ae482a79d538255ec754a.svg",
+    "static/media/favorito_01.svg": "/static/media/favorito_01.4032fb6a35d9a756a3b67961522b5f0f.svg",
+    "static/media/favorito_03.svg": "/static/media/favorito_03.ff463c11cd808c460ddde196512165b8.svg",
+    "index.html": "/index.html",
+    "main.039bf95e.css.map": "/static/css/main.039bf95e.css.map",
+    "main.fb953b2c.js.map": "/static/js/main.fb953b2c.js.map"
   },
   "entrypoints": [
     "static/css/main.039bf95e.css",
-    "static/js/main.6ced73a4.js"
+    "static/js/main.fb953b2c.js"
   ]
 }
