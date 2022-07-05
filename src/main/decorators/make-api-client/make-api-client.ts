@@ -4,7 +4,7 @@ import ApiClientImplementation from 'infra/adapters/api/api-client';
 class PrepareApiClientRequest implements ApiClient {
   constructor(private readonly apiClient: ApiClient) {}
 
-  request(data: ApiRequest): Promise<ApiResponse<any>> {
+  request(data: ApiRequest): Promise<ApiResponse> {
     return this.apiClient.request({ ...data, url: process.env.REACT_APP_API_URI + data.url });
   }
 }

@@ -4,7 +4,7 @@ import createAuthHash from 'service/auth/create-hash/create-hash';
 import { ApiClient as IApiClient, ApiRequest, ApiResponse } from './protocols/api-client';
 
 export default class ApiClient implements IApiClient {
-  async request(params: ApiRequest): Promise<ApiResponse<any>> {
+  async request(params: ApiRequest): Promise<ApiResponse> {
     const timestamp = new Date().getTime();
 
     const {
