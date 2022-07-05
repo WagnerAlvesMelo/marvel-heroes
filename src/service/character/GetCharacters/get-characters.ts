@@ -13,6 +13,6 @@ export default class GetCharacters implements IGetCharacters {
       params: { ...params },
     });
 
-    return { ...data, results: plainToClassInstance(Character, data.results) };
+    return { ...data, results: plainToClassInstance(Character, data?.results) };
   }
 }
