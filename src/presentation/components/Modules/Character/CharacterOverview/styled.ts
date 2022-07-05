@@ -7,6 +7,13 @@ export const Wrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: ${({ theme }) => theme.spacings.medium};
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    img {
+      display: none;
+    }
+  }
 `;
 
 export const CharacterInfos = styled.div`
@@ -16,6 +23,10 @@ export const CharacterInfos = styled.div`
   z-index: 10;
   font-size: ${({ theme }) => theme.spacings.xsmall};
   margin-top: ${({ theme }) => theme.spacings.large};
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 export const Heading = styled.header`
@@ -45,7 +56,7 @@ export const HorizontalAlignedBox = styled.div`
   align-items: center;
 
   & + div {
-    margin-top: ${({ theme }) => theme.spacings.small};
+    margin-top: ${({ theme }) => theme.spacings.xsmall};
   }
 
   svg,

@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const Wrapper = styled.form`
   position: relative;
   width: 60%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Input = styled.input.attrs({ type: 'text' })`

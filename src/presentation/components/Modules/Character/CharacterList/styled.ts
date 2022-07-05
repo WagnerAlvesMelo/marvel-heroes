@@ -15,6 +15,13 @@ export const Grid = styled.ul`
   li {
     list-style: none;
   }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const NotFoundText = styled.div`

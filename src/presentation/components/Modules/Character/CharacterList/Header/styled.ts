@@ -6,8 +6,12 @@ export const Wrapper = styled.header`
   align-items: center;
   justify-content: space-between;
   margin-top: ${({ theme }) => theme.spacings.medium};
-
   font-size: ${({ theme }) => theme.font.sizes.medium};
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const Filters = styled.div`
@@ -15,6 +19,17 @@ export const Filters = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: ${({ theme }) => theme.spacings.small};
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    gap: ${({ theme }) => theme.spacings.xxsmall};
+
+    &:first-of-type {
+      margin-top: ${({ theme }) => theme.spacings.xxsmall};
+    }
+  }
 `;
 
 export const FilterItem = styled.div<{ selected: boolean }>`
@@ -33,5 +48,10 @@ export const FilterItem = styled.div<{ selected: boolean }>`
     g {
       fill: ${({ theme, selected }) => (selected ? theme.colors.primary : theme.colors.text)};
     }
+  }
+
+  @media (max-width: 700px) {
+    width: 200px;
+    justify-content: space-between;
   }
 `;

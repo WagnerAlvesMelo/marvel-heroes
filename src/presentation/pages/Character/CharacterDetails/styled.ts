@@ -14,6 +14,10 @@ export const Header = styled.header`
   input {
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const LoadingWrapper = styled.div`

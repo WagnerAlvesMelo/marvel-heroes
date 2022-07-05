@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
 
 import Character from 'domain/models/Character/Character';
-import { ReactComponent as FilledHearth } from 'assets/favorito_01.svg';
 import { ReactComponent as OutlinedHearth } from 'assets/favorito_02.svg';
 import { FavoritesContext } from 'presentation/contexts/modules/character/favorites';
 import Wrapper from './styled';

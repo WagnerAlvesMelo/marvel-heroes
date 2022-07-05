@@ -9,9 +9,13 @@ export const Header = styled.header`
   flex-direction: column;
   gap: ${({ theme }) => theme.spacings.xxsmall};
   gap: ${({ theme }) => theme.spacings.xsmall};
-  padding-top: ${({ theme }) => theme.spacings.medium};
+  padding-top: ${({ theme }) => theme.spacings.xxsmall};
 
   p {
     margin-bottom: ${({ theme }) => theme.spacings.medium};
+  }
+
+  h1 {
+    text-align: center;
   }
 `;

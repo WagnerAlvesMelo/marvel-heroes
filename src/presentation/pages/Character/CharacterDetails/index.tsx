@@ -37,7 +37,7 @@ export default function CharacterDetails() {
 
   const handleSubmit = (value: string) => {
     setSearchQuery(value);
-    navigate('/home');
+    navigate('/');
   };
 
   useEffect(() => {

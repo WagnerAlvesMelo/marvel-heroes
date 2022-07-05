@@ -4,6 +4,12 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  h3 {
+    @media (max-width: 768px) {
+      padding-top: ${({ theme }) => theme.spacings.large};
+    }
+  }
 `;
 
 export const List = styled.ul`
@@ -12,6 +18,13 @@ export const List = styled.ul`
   grid-template-columns: repeat(6, 1fr);
   gap: ${({ theme }) => theme.spacings.medium};
   padding-top: ${({ theme }) => theme.spacings.medium};
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const ListItem = styled.li`

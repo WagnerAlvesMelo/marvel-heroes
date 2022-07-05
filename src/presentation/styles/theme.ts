@@ -16,7 +16,7 @@ const theme = {
   },
   colors: {
     primary: '#ff0000',
-    secondary: '#fdecec',
+    secondary: '#ffbebe',
     title: '#404040',
     text: '#8c8c8c',
     bg: '#e7f6e7',
