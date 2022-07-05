@@ -6,10 +6,15 @@ on:
   pull_request:
     branches: [ master ]
 
-
+env:
+  CI: true
+  REACT_APP_API_PUBLIC_KEY: ${{ secrets.REACT_APP_API_PUBLIC_KEY }}
+  REACT_APP_API_PRIVATE_KEY: ${{ secrets.REACT_APP_API_PRIVATE_KEY }}
+  REACT_APP_API_URI: ${{ secrets.REACT_APP_API_URI }}
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - uses: actions/checkout@v2
 
@@ -18,11 +23,6 @@ jobs:
 
       - name: test
         run: yarn test
-        env:
-          CI: true
-          REACT_APP_API_PUBLIC_KEY: ${{ secrets.REACT_APP_API_PUBLIC_KEY }}
-          REACT_APP_API_PRIVATE_KEY: ${{ secrets.REACT_APP_API_PRIVATE_KEY }}
-          REACT_APP_API_URI: ${{ secrets.REACT_APP_API_URI }}
 
       - name: build
         run: yarn build
