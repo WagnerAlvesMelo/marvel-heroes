@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.039bf95e.css",
-    "main.js": "/static/js/main.fb953b2c.js",
+    "main.js": "/static/js/main.de71ba3e.js",
     "static/media/hulk.png": "/static/media/hulk.be72a9539beaba25254f.png",
     "static/media/logo.svg": "/static/media/logo.42bf435da70f6dd2e0f57bbf31626fe1.svg",
     "static/media/logo_menor.svg": "/static/media/logo_menor.09f0033940058a0480cc4b92ed09c7e6.svg",
@@ -14,10 +14,10 @@
     "static/media/favorito_03.svg": "/static/media/favorito_03.ff463c11cd808c460ddde196512165b8.svg",
     "index.html": "/index.html",
     "main.039bf95e.css.map": "/static/css/main.039bf95e.css.map",
-    "main.fb953b2c.js.map": "/static/js/main.fb953b2c.js.map"
+    "main.de71ba3e.js.map": "/static/js/main.de71ba3e.js.map"
   },
   "entrypoints": [
     "static/css/main.039bf95e.css",
-    "static/js/main.fb953b2c.js"
+    "static/js/main.de71ba3e.js"
   ]
 }
