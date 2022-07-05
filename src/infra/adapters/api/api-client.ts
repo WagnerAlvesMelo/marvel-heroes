@@ -1,17 +1,17 @@
 import axios from 'axios';
 
 import createAuthHash from 'service/auth/create-hash/create-hash';
-import { ApiClient as IApiClient, ApiRequest, ApiResponse } from './protocols/api-client';
+import {
+  ApiClient as IApiClient,
+  ApiRequest,
+  ApiResponse,
+} from 'service/protocols/api/protocols/api-client';
 
 export default class ApiClient implements IApiClient {
   async request(params: ApiRequest): Promise<ApiResponse> {
     const timestamp = new Date().getTime();
 
-    const {
-      data: { data },
-      headers,
-      status,
-    } = await axios.request({
+    const response = await axios.request({
       ...params,
       params: {
         ...params.params,
@@ -21,6 +21,6 @@ export default class ApiClient implements IApiClient {
       },
     });
 
-    return { data, headers, status };
+    return { data: response?.data.data, headers: response?.headers, status: response?.status };
   }
 }

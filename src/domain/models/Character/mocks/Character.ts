@@ -4,8 +4,8 @@ import Thumbnail from 'domain/type-objects/thumbnail';
 export default function makeCharacterMock() {
   return new Character({
     id: 1011334,
-    name: '3-D Man',
-    description: '',
+    name: 'MockedCharacter',
+    description: 'MockedDescription',
     modified: '2014-04-29T14:18:17-0400',
     thumbnail: new Thumbnail({
       path: 'http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784',

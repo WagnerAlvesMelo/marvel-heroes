@@ -71,6 +71,10 @@
   "jest": {
     "collectCoverageFrom": [
       "!**/protocols/**",
+      "!**/domain/models/**",
+      "!**/domain/type-objects/**",
+      "!**/domain/use-cases/**",
+      "!src/index.tsx",
       "!**/*.d.ts"
     ]
   },

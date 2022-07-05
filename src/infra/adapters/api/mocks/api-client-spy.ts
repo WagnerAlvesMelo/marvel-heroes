@@ -1,4 +1,4 @@
-import { ApiClient, ApiRequest, ApiResponse } from 'infra/adapters/api/protocols/api-client';
+import { ApiClient, ApiRequest, ApiResponse } from 'service/protocols/api/protocols/api-client';
 
 export class ApiClientSpy implements ApiClient {
   body?: string;

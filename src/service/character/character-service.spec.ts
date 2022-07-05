@@ -12,7 +12,8 @@ describe('CharactersService', () => {
 
     const charactersService = new CharactersService(getCharacters, getCharacterById);
     charactersService.getCharacters();
+    charactersService.getCharacterById(1);
 
-    expect(mockedFn).toHaveBeenCalled();
+    expect(mockedFn).toHaveBeenCalledTimes(2);
   });
 });

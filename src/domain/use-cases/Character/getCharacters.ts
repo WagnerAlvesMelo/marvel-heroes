@@ -1,5 +1,5 @@
 import Character from 'domain/models/Character/Character';
-import { Pagination } from 'infra/adapters/api/protocols/api-client';
+import { Pagination } from 'service/protocols/api/protocols/api-client';
 
 export interface GetCharacters {
   execute(params?: GetCharacters.Params): Promise<GetCharacters.Model>;

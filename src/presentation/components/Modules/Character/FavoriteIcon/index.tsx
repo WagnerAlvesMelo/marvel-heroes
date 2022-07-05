@@ -37,7 +37,7 @@ export default function CharacterFavoriteIcon({ character }: Props) {
 
   return (
     <Wrapper favorite={isCharacterFavorite} style={{ cursor: 'pointer' }}>
-      <OutlinedHearth onClick={handleClick} />
+      <OutlinedHearth data-testid="favorite-icon" onClick={handleClick} />
     </Wrapper>
   );
 }

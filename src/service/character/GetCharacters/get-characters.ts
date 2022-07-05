@@ -1,4 +1,4 @@
-import { ApiClient } from 'infra/adapters/api/protocols/api-client';
+import { ApiClient } from 'service/protocols/api/protocols/api-client';
 import { plainToClassInstance } from 'infra/adapters/class/type-mapper';
 import Character from 'domain/models/Character/Character';
 import { GetCharacters as IGetCharacters } from 'domain/use-cases/Character/getCharacters';

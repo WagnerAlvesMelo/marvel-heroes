@@ -33,19 +33,15 @@ export default function CharacterList() {
       </S.LoadingWrapper>
     );
   }
-
-  if (!search.characters.length && !search.isLoading) {
-    return (
-      <S.NotFoundText>
-        <img src={FailIcon} alt="Nenhum personagem encontrado!" />
-        <Title level={3}>Nenhum personagem encontrado!</Title>
-      </S.NotFoundText>
-    );
-  }
-
   return (
     <S.Wrapper>
       <CharacterListHeader />
+      {!search.characters.length && !search.isLoading && (
+        <S.NotFoundText>
+          <img src={FailIcon} alt="Nenhum personagem encontrado!" />
+          <Title level={3}>Nenhum personagem encontrado!</Title>
+        </S.NotFoundText>
+      )}
       <S.Grid>
         {search.characters.map((character) => (
           <li key={character.id}>

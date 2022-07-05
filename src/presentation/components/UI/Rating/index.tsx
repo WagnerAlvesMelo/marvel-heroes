@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { ReactComponent as StarIcon } from 'assets/avaliacao_on.svg';
 import * as S from './styled';
 
 export default function Rating() {
@@ -9,7 +8,7 @@ export default function Rating() {
   return (
     <S.Wrapper>
       {[...Array(5)].map((_, index) => (
-        <S.StarIcon filled={index < randomRating} />
+        <S.StarIcon data-testid="rating-star" filled={index < randomRating} />
       ))}
     </S.Wrapper>
   );

@@ -1,6 +1,6 @@
 import { GetComicsByCharacterId as IGetComicsByCharacterId } from 'domain/use-cases/Comic/getComicByCharacterId';
 import Comic from 'domain/models/Comic/Comic';
-import { ApiClient } from 'infra/adapters/api/protocols/api-client';
+import { ApiClient } from 'service/protocols/api/protocols/api-client';
 import { plainToClassInstance } from 'infra/adapters/class/type-mapper';
 
 export default class GetComicsByCharacterId implements IGetComicsByCharacterId {

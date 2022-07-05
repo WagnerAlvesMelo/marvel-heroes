@@ -4,3 +4,7 @@
 // learn more: https://github.com/testing-library/jest-dom
 import 'reflect-metadata';
 import '@testing-library/jest-dom';
+import 'react-toastify/dist/ReactToastify.css';
+import MockServices from 'presentation/hooks/service/mocks/service';
+
+jest.mock('presentation/hooks/service/service.tsx', () => MockServices);
