@@ -32,7 +32,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -61,6 +63,7 @@
     "eslint-plugin-prettier": "^4.1.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.7.1"
   },
   "jest": {
@@ -68,5 +71,6 @@
       "!**/protocols/**",
       "!**/*.d.ts"
     ]
-  }
+  },
+  "homepage": "https://WagnerAlvesMelo.github.io/marvel-heroes"
 }
