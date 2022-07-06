@@ -42,7 +42,8 @@ Página de detalhe do personagem:
 
 - Install - Instala as dependências do projeto
 - Test - Processa os testes unitários da aplicação
-- Deploy - Gera o build de produção e realiza o deploy dos arquivos já buildados para o Github Pages
+- Build - Gera os arquivos de build para produção
+- Deploy - Realiza o deploy dos arquivos já buildados para o Github Pages
 
 ## Como instalar o projeto
 
