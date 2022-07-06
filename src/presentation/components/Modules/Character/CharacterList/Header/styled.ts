@@ -32,7 +32,7 @@ export const Filters = styled.div`
   }
 `;
 
-export const FilterItem = styled.div<{ selected: boolean }>`
+export const FilterItem = styled.div<{ selected?: boolean }>`
   display: flex;
   align-items: center;
   cursor: pointer;

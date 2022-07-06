@@ -15,9 +15,11 @@ export default function CharacterListHeader() {
         {`Encontrados ${search.totalCharacters} heróis`}
       </Text>
       <S.Filters>
-        <S.FilterItem selected={search.orderByName} onClick={search.toggleOrderByName}>
+        <S.FilterItem onClick={search.toggleOrderByName}>
           <HeroIcon aria-label="Ordenar por nome" />
-          <Text as="p">Ordenar por nome - A/Z</Text>
+          <Text as="p">
+            {`Ordenar por nome - ${search.orderByName === 'ASC' ? 'A / Z' : 'Z / A'}`}
+          </Text>
         </S.FilterItem>
         <S.FilterItem selected={search.favoritesOnly} onClick={search.toggleFavoritesOnly}>
           <FavoriteIcon aria-label="Somente favoritos" />

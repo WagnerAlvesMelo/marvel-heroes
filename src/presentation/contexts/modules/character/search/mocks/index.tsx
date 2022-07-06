@@ -4,7 +4,7 @@ const characterSearchContextValuesMock = () => ({
   characters: [] as Character[],
   totalCharacters: 0,
   favoritesOnly: false,
-  orderByName: false,
+  orderByName: 'ASC' as 'ASC' | 'DESC',
   searchQuery: undefined,
   isLoading: false,
   toggleFavoritesOnly: jest.fn(),
