@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Wrapper = styled(Link)`
-  width: 50%;
+  display: block;
+  width: 100%;
   position: relative;
   cursor: pointer;
 
