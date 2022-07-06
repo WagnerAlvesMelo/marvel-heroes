@@ -1,46 +1,97 @@
-# Getting Started with Create React App
+![example workflow](https://github.com/WagnerAlvesMelo/marvel-heroes/actions/workflows/main.yml/badge.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Link da aplicação: https://wagneralvesmelo.github.io/marvel-heroes/
 
-## Available Scripts
+Aplicação que possibilita a busca dos personagens do universo da Marvel e seus quadrinhos mais recentes.
 
-In the project directory, you can run:
+## Requisitos Funcionais
 
-### `yarn start`
+Página de listagem de personagens (home):
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Exibir os 20 primeiros resultados da API;
+- Permitir ordenação por nome do personagem;
+- Permitir filtrar por nome, pelo campo de busca;
+- Permitir mostrar apenas os personagens favoritos;
+- Permitir o usuário favoritar/desfavoritar até 5 personagens;
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Página de detalhe do personagem:
 
-### `yarn test`
+- Exibir dados do personagem;
+- Exibir últimos 10 quadrinhos lançados deste personagem (onSaleDate);
+- Permitir o usuário favoritar/desfavoritar (dentro do limite de 5)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requisitos bônus contemplados
 
-### `yarn build`
+- Adicionar paginação a listagem para exibir além dos 20 personagens iniciais;
+- Persistir os dados de favoritos (para manter os dados após o reload da página);
+- Layout responsivo;
+- Utilização de ES6+;
+- Utilização de ferramentas para garantir a qualidade do código (Eslint + Prettier);
+- CI/CD.
+- (Não foram realizados testes e2e, mas os componentes e páginas estão cobertos por testes unitários)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tecnologias usadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ReactJS
+- ReactContext
+- Styled Components
+- Github pages
+- Github actions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Etapas CI/CD
 
-### `yarn eject`
+- Install - Instala as dependências do projeto
+- Test - Processa os testes unitários da aplicação
+- Build - Gera os arquivos de build para produção
+- Deploy - Realiza o deploy dos arquivos já buildados para o Github Pages
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Como instalar o projeto
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Requisitos:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- NodeJS (v14.19.0 ou superior)
+- Yarn
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Para instalar as dependências do projeto execute o seguinte script:
 
-## Learn More
+```
+yarn
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para formatar os espaçamentos gerados pelo Github:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+yarn lint:fix
+```
+
+Para iniciar o projeto execute o comando:
+
+```
+yarn start
+```
+
+## Scripts
+
+Iniciar projeto em modo de desenvolvimento
+
+```
+yarn start
+```
+
+Organizar linhas de código com prettier
+
+```
+yarn format
+```
+
+Executar testes unitários
+
+```
+yarn test
+```
+
+Gerar build de produção
+
+```
+yarn build
+```
